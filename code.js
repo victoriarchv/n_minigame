@@ -12,14 +12,23 @@ contenedor.addEventListener("click", tap)
 
 /* INICIALIZAR */
 for (let i = 1; i <= 18; i++) {
-  const audio = new Audio(`media/AUDIO/a${i}.mp3`);
-  audio.preload = "auto";
-  audio.load();
+    const audio = new Audio(`media/AUDIO/a${i}.mp3`);
+    audio.preload = "auto";
+    audio.load();
 }
 
 const music = new Audio("media/AUDIO/musica.mp3");
 music.preload = "auto";
 music.load();
+
+
+const preloadedImages = [];
+for (let i = 1; i <= 34; i++) {
+    const img = new Image();
+    img.src = `media/IMG/archivo/${i}.png`;
+
+    preloadedImages.push(img);
+}
 
 
 /* FUNCIONES */
@@ -291,7 +300,7 @@ function addImage(n, x, y) {
     let posX = x;
     let posy = y;
 
-    let img = document.createElement("img");
+    let img = preloadedImages[n - 1]
     img.setAttribute("src", `media/IMG/archivo/${num}.png`);
     img.setAttribute("class", `collage`);
     img.style.position = "fixed";
