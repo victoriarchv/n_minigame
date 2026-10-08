@@ -11,6 +11,15 @@ contenedor.addEventListener("click", tap)
 
 
 /* INICIALIZAR */
+for (let i = 1; i <= 18; i++) {
+  const audio = new Audio(`media/AUDIO/a${i}.mp3`);
+  audio.preload = "auto";
+  audio.load();
+}
+
+const music = new Audio("media/AUDIO/musica.mp3");
+music.preload = "auto";
+music.load();
 
 
 /* FUNCIONES */
@@ -303,19 +312,3 @@ function addText(_text, _id) {
     p.innerHTML = text
     body.appendChild(p)
 }
-
-
-
-/* tengo una carpeta de imagenes
-quiero insertarlas dinamicamente en el #contenedor, 
-seteadas en el html para poder controlar con el case (case 21-en adelante) (poner class a cada una) 
-función solo de show
-cada una con una ubicación en la web determinada de forma randómica fixed x,y (top, left) 
-
-1. Insertar imágenes en el html
-2. Agregado de clase "step"
-3. Agregado de pos fixed
-4. Agregado x,y random
-
-*/
-
