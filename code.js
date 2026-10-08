@@ -208,6 +208,13 @@ function tap() {
             console.log("step 21");
 
             audioplay("musica")
+
+            // preload upcoming game images
+            for (let i = 1; i <= 10; i++) {
+                const img = new Image();
+                img.src = `media/IMG/archivo/${i}.png`;
+            }
+
             step += 1;
             break;
     }
@@ -248,6 +255,20 @@ function tapCollage(e) {
 
         if (step >= 22 && step <= 55) {
             addImage(step - 21, x, y);
+
+            if (step === 31) {
+                for (let i = 11; i <= 22; i++) {
+                    const img = new Image();
+                    img.src = `media/IMG/archivo/${i}.png`;
+                }
+            }
+
+            if (step === 40) {
+                for (let i = 23; i <= 34; i++) {
+                    const img = new Image();
+                    img.src = `media/IMG/archivo/${i}.png`;
+                }
+            }
 
 
             if (step === 22) {
