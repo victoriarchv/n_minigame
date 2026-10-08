@@ -292,7 +292,7 @@ function addImage(n, x, y) {
     let posy = y;
 
     let img = new Image();
-    img.setAttribute("src", `media/IMG/archivo/${num}.webP`);
+    img.setAttribute("src", `media/IMG/archivo/${num}.webp`);
     img.setAttribute("class", `collage`);
     img.style.position = "fixed";
     img.style.left = `${posX}px`;
