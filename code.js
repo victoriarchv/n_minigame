@@ -22,15 +22,6 @@ music.preload = "auto";
 music.load();
 
 
-const preloadedImages = [];
-for (let i = 1; i <= 34; i++) {
-    const img = new Image();
-    img.src = `media/IMG/archivo/${i}.png`;
-
-    preloadedImages.push(img);
-}
-
-
 /* FUNCIONES */
 function tap() {
     /* console.log("tap"); */
@@ -300,7 +291,7 @@ function addImage(n, x, y) {
     let posX = x;
     let posy = y;
 
-    let img = preloadedImages[n - 1]
+    let img = new Image();
     img.setAttribute("src", `media/IMG/archivo/${num}.png`);
     img.setAttribute("class", `collage`);
     img.style.position = "fixed";

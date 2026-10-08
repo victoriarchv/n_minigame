@@ -85,9 +85,49 @@ body P#t3 {
   animation: move-vertical 1s ease-in infinite alternate;
 }
 
+.move-vertical2 {
+  animation: move-vertical 1.2s ease-in infinite alternate;
+}
+
+.move-vertical3 {
+  animation: move-vertical 0.8s ease-in infinite alternate;
+}
+
 .collage {
   animation: appear 1s;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.247);
+}
+
+.beat {
+  animation: beat 0.8s infinite ease-in alternate;
+}
+
+.beat2 {
+  animation: beat 1s infinite ease-in alternate;
+}
+
+.beat3 {
+  animation: beat 1.2s infinite ease-in alternate;
+}
+
+.slide {
+  animation: slide 0.6s infinite linear alternate;
+}
+
+.slideFast {
+  animation: slide 0.1s infinite linear alternate;
+}
+
+.slideFaster {
+  animation: slide 0.05s infinite linear alternate;
+}
+
+.tilt {
+  animation: tilt 1s infinite ease-in-out alternate;
+}
+
+.tilt2 {
+  animation: tilt 0.5s infinite ease-in-out alternate;
 }
 
 /* ANIMACIONESS */
@@ -105,5 +145,37 @@ body P#t3 {
   }
   100% {
     opacity: 100%;
+  }
+}
+@keyframes beat {
+  0% {
+    transform: scale(95%);
+  }
+  100% {
+    transform: scale(105%);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translate(-1%, 0);
+  }
+  100% {
+    transform: translate(1%, 0);
+  }
+}
+@keyframes tilt {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes tilt2 {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }/*# sourceMappingURL=style.css.map */
