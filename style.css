@@ -70,8 +70,48 @@ body P#t3 {
 #contenedor img {
   width: inherit;
   position: absolute;
+  inset: 0;
+  margin: auto;
+}
+#contenedor .fondo {
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  inset: 0;
+  margin: auto;
 }
 
+@media screen and (min-width: 1000px) {
+  #contenedor {
+    width: 60vw;
+    height: 60vh;
+  }
+  #contenedor p {
+    font-size: 2.5em;
+  }
+  #contenedor img {
+    width: auto;
+    height: inherit;
+    position: absolute;
+  }
+  #contenedor .fondo {
+    min-width: 100%;
+  }
+  body .collage {
+    max-height: 70vh;
+    width: auto;
+  }
+  body p {
+    font-size: 2.5em;
+  }
+  body P#t3 {
+    top: 50%;
+    transform: translate(0, -50%) rotate(-10deg);
+    font-size: 10em;
+  }
+}
 /* INGREDIENTES */
 .hide {
   opacity: 0%;
@@ -94,6 +134,7 @@ body P#t3 {
 }
 
 .collage {
+  width: 70vw;
   animation: appear 1s;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.247);
 }

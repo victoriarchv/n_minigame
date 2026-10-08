@@ -276,7 +276,7 @@ function tapCollage(e) {
             const diffMs = today - fixedDate;
             const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
-            addText(`<mark>Te quiero mucho pipi<br>felices 951 días :3</mark>`, "t2")
+            addText(`<mark>Te quiero mucho pipi<br>felices ${diffDays} días :3</mark>`, "t2")
 
             step += 1;
         }
@@ -292,12 +292,11 @@ function addImage(n, x, y) {
     let posy = y;
 
     let img = new Image();
-    img.setAttribute("src", `media/IMG/archivo/${num}.png`);
+    img.setAttribute("src", `media/IMG/archivo/${num}.webP`);
     img.setAttribute("class", `collage`);
     img.style.position = "fixed";
     img.style.left = `${posX}px`;
     img.style.top = `${posy}px`;
-    img.style.width = "70vw";
     img.style.transform = `translate(-50%, -50%) rotate(${Math.random() * 30 - 15}deg)`;
     img.style.pointerEvents = "none";
     body.appendChild(img)
